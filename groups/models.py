@@ -17,6 +17,10 @@ register = template.Library()
 
 
 class Group(models.Model):
+    """
+        Base class for Group definition
+    """
+    
     name = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(allow_unicode=True, unique=True)
     description = models.TextField(blank=True, default='')
@@ -40,6 +44,10 @@ class Group(models.Model):
 
 
 class GroupMember(models.Model):
+    """
+        Manages relation between users and groups
+    """
+    
     group = models.ForeignKey(Group,related_name='memberships',on_delete=models.CASCADE)
     user = models.ForeignKey(User,related_name='user_groups',on_delete=models.CASCADE)
 
