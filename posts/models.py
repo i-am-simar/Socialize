@@ -12,6 +12,10 @@ User = get_user_model()
 
 
 class Post(models.Model):
+    """
+        Base class for handling post definition
+    """
+    
     user = models.ForeignKey(User, related_name="posts",on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now=True)
     message = models.TextField()
