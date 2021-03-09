@@ -19,11 +19,11 @@ from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns = [
-    #path('', views.HomePage.as_view(), name="home"), 
-    #path('login/', auth_views.LoginView.as_view(template_name="accounts/login.html"),name='login'),
-    path('', auth_views.LoginView.as_view(template_name="accounts/login.html"),name='home'),
+    
+    path('', auth_views.LoginView.as_view(template_name="login.html"),name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
-    path('test/', views.TestPage.as_view(), name="test"),
+    path('home/', views.HomePage.as_view(), name="home"),
     path('thanks/', views.ThanksPage.as_view(), name="thanks"),
     path('accounts/', include("accounts.urls", namespace="accounts")),
     path('accounts/', include("django.contrib.auth.urls")),

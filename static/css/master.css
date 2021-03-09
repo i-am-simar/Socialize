@@ -1,19 +1,43 @@
-.mycontent{
-  padding-top: 100px;
- border: 10px solid red;
-} 
-
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background: #191063;
-  background-color: #F6F8FA;
-  margin: 0;
+.container{
+  max-height:600px;
 }
 
+.login-page-text{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  color: white; 
+  font-size:30px;
+}
+
+#image{
+  height:213px;
+  margin-top:50px; 
+  margin-left: -50px;
+}
+.module-wrap{
+  width: 382px;
+  position: relative;
+  background: linear-gradient(to right, #00796B, #004B4B);
+  padding: 3px;
+  margin-left: 60%;
+  margin-bottom: 40vh;
+  margin-top:-350px;
+}
+
+#login-block{
+  background: #222;
+  color: white;
+  height: 60vh;
+  width: 60vh;
+  padding: 2rem;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #222;
+}
 
 #note {
   position: absolute;

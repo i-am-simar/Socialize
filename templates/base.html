@@ -13,6 +13,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <link href="static/css/master.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark mynav" role="navigation" id="navbar">
@@ -25,16 +26,16 @@
             <a class="nav-item nav-link" href="{% url 'posts:create' %}" class="btn btn-simple">Post</a>
             <a class="nav-item nav-link" href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a>
             <a class="nav-item nav-link" href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a>
-            <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a>
+            <a class="nav-item nav-link" href="{% url 'logout' %}" class="btn btn-simple">Log out</a>
           {% else %}
             <a class="nav-item nav-link" href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a>
-            <a class="nav-item nav-link" href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign up</a>
+            
           {% endif %}
         </div>
       </div>
     </nav>
 
-    <div class="container mycontent">
+    <div class="container">
       {% block content %}
 
       {% endblock %}
